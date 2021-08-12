@@ -11,4 +11,8 @@ It is a mix of the following two packages
 
 The UniVrm version of this package is v0.79.0.
 
+Download an unipackage file from the link below and use it.
+
+[URPUniVrm_version_1.unitypackage](https://github.com/akihisaArchieSakai/URP-UniVrm/releases/tag/ver-1.0.0)
+
 Just import this package into your Universal Render Pipeline project, drag and drop the Vrm file, and your shaders will appear just fine.
