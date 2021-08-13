@@ -20,3 +20,20 @@ Just import this package into your Universal Render Pipeline project, drag and d
 If you like this project, please support my activities.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S52PWUR)
+
+## License
+
+[MIT](./LICENSE.txt)
+
+## Author
+
+Evelyn GameDev
+
+* [Youtube](https://www.youtube.com/c/EvelynGameDev)
+* [Twitter](https://twitter.com/ArchieSakai)
+* [Instagram](https://www.instagram.com/evelyn_gamedev/)
+* [Blog](https://gamedev.soarhap.com/)
+
+## 日本語READMEはこちら
+
+[日本語](./README_jp.md)
