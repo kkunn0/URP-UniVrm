@@ -7,9 +7,9 @@ This package also makes sure that the shaders of the Vroid model are properly di
 It is a mix of the following two packages
 
 * [UniVrm](https://github.com/vrm-c/UniVRM)
-* [Shader Graphs MToon for URP VR](https://github.com/simplestargame/ShaderGraphsMToonForURPVR)
+* [Shader Graphs MToon for URP VR](https://github.com/simplestargame/ShaderGraphsMToonForURPVR) ← Errors in custom shaders were fixed in the original repository with this package.
 
-The UniVrm version of this package is v0.79.0.
+The UniVrm version of this package is UniVRM0X-0.80.0.
 
 Drag and drop the unipackage file into your Unity project to use it.
 

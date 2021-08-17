@@ -1,7 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
-
+#if UNITY_2020_1_OR_NEWER
+using UnityEditor.AssetImporters;
+#else
+using UnityEditor.Experimental.AssetImporters;
+#endif
 using UnityEngine;
 using VRMShaders;
 
@@ -12,7 +16,7 @@ namespace UniGLTF
         public RemapEditorAnimation(IEnumerable<SubAssetKey> keys, EditorMapGetterFunc getter, EditorMapSetterFunc setter) : base(keys, getter, setter)
         { }
 
-        public void OnGUI(UnityEditor.AssetImporters.ScriptedImporter importer, GltfData data)
+        public void OnGUI(ScriptedImporter importer, GltfData data)
         {
             if (!HasKeys)
             {
@@ -40,7 +44,7 @@ namespace UniGLTF
             DrawRemapGUI<AnimationClip>(importer.GetExternalObjectMap());
         }
 
-        public static void Extract(UnityEditor.AssetImporters.ScriptedImporter importer, GltfData data)
+        public static void Extract(ScriptedImporter importer, GltfData data)
         {
             if (string.IsNullOrEmpty(importer.assetPath))
             {

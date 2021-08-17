@@ -24,13 +24,6 @@ namespace VRM.DevOnly.PackageExporter
 
     public static class VRMExportUnityPackage
     {
-        const string DATE_FORMAT = "yyyyMMdd";
-
-        static string GetDesktop()
-        {
-            return Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/VRM";
-        }
-
         static string GetProjectRoot()
         {
             return Path.GetFullPath(Application.dataPath + "/..");
@@ -141,6 +134,11 @@ namespace VRM.DevOnly.PackageExporter
             CreateUnityPackages(folder);
         }
 
+        /// <summary>
+        /// This is call from Jenkins build
+        /// 
+        /// -quit -batchMode -executeMethod VRM.DevOnly.PackageExporter.VRMExportUnityPackage.CreateUnityPackageWithBuild
+        /// </summary>
         public static void CreateUnityPackageWithBuild()
         {
             var folder = GetProjectRoot();
@@ -154,11 +152,6 @@ namespace VRM.DevOnly.PackageExporter
                 Debug.LogError("Failed to build test scenes");
             }
             CreateUnityPackages(folder);
-        }
-
-        public static void CreateUnityPackage()
-        {
-            CreateUnityPackages(Path.GetFullPath(Path.Combine(Application.dataPath, "..")));
         }
 
         public class GlobList
@@ -198,19 +191,34 @@ namespace VRM.DevOnly.PackageExporter
             // UniVRM and sub packages
             {
                 var packages = new[]{
-                    new PackageInfo("UniVRM")
+                    new PackageInfo("UniVRM0X")
                     {
                         List = new []{
                             new GlobList("Assets/VRM"),
                             new GlobList("Assets/VRMShaders"),
-                            new GlobList("Assets/MeshUtility"),
                             new GlobList("Assets/UniGLTF"),
                         }
                     },
-                    new PackageInfo("UniVRM-samples")
+                    new PackageInfo("UniVRM0X-samples")
                     {
                         List = new[]{
                             new GlobList("Assets/VRM.Samples"),
+                            new GlobList("Assets/StreamingAssets/VRM.Samples"),
+                        }
+                    },
+                    new PackageInfo("UniVRM10")
+                    {
+                        List = new []{
+                            new GlobList("Assets/VRM10"),
+                            new GlobList("Assets/VRMShaders"),
+                            new GlobList("Assets/UniGLTF"),
+                        }
+                    },
+                    new PackageInfo("UniVRM10-samples")
+                    {
+                        List = new[]{
+                            new GlobList("Assets/VRM10.Samples"),
+                            new GlobList("Assets/UniGLTF.Samples"), // look dev resources
                             new GlobList("Assets/StreamingAssets/VRM.Samples"),
                         }
                     }

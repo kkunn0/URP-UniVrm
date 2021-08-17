@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEditor;
-
+#if UNITY_2020_1_OR_NEWER
+using UnityEditor.AssetImporters;
+#else
+using UnityEditor.Experimental.AssetImporters;
+#endif
 using UnityEngine;
 using VRMShaders;
 
@@ -37,7 +41,7 @@ namespace UniGLTF
             public String Name;
 
             public SubAssetKey Key => new SubAssetKey(TypeMap[Type], Name);
-            public UnityEditor.AssetImporters.ScriptedImporter.SourceAssetIdentifier ID => new AssetImporter.SourceAssetIdentifier(TypeMap[Type], Name);
+            public ScriptedImporter.SourceAssetIdentifier ID => new AssetImporter.SourceAssetIdentifier(TypeMap[Type], Name);
 
             [SerializeField]
             public UnityEngine.Object Object;
@@ -75,13 +79,13 @@ namespace UniGLTF
         /// </summary>
         /// <param name="importer"></param>
         /// <returns></returns>
-        protected bool CanExtract(UnityEditor.AssetImporters.ScriptedImporter importer)
+        protected bool CanExtract(ScriptedImporter importer)
         {
             foreach (var (k, v) in importer.GetExternalObjectMap())
             {
                 foreach (var key in m_keys)
                 {
-                    if (k.type.IsAssignableFrom(key.Type))
+                    if (k.type != null && k.type.IsAssignableFrom(key.Type))
                     {
                         return false;
                     }
@@ -92,7 +96,7 @@ namespace UniGLTF
         }
 
         protected void DrawRemapGUI<T>(
-            Dictionary<UnityEditor.AssetImporters.ScriptedImporter.SourceAssetIdentifier, UnityEngine.Object> externalObjectMap
+            Dictionary<ScriptedImporter.SourceAssetIdentifier, UnityEngine.Object> externalObjectMap
         ) where T : UnityEngine.Object
         {
             EditorGUI.indentLevel++;
@@ -170,7 +174,7 @@ namespace UniGLTF
             return clone;
         }
 
-        public static void ClearExternalObjects(UnityEditor.AssetImporters.ScriptedImporter importer, params Type[] targetTypes)
+        public static void ClearExternalObjects(ScriptedImporter importer, params Type[] targetTypes)
         {
             foreach (var targetType in targetTypes)
             {

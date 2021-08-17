@@ -35,7 +35,8 @@ namespace VRM
             //matDesc = new MaterialDescriptor(name, vrmMaterial.shader);
             matDesc = new MaterialDescriptor(name, "Shader Graphs/MToon");
 
-            matDesc.RenderQueue = vrmMaterial.renderQueue;
+            //matDesc.RenderQueue = vrmMaterial.renderQueue;
+            matDesc.RenderQueue = (int)UnityEngine.Rendering.RenderQueue.GeometryLast < vrmMaterial.renderQueue ? (int)UnityEngine.Rendering.RenderQueue.GeometryLast : vrmMaterial.renderQueue;
 
             foreach (var kv in vrmMaterial.floatProperties)
             {
