@@ -1,14 +1,25 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
-
+#if UNITY_2020_1_OR_NEWER
+using UnityEditor.AssetImporters;
+#else
+using UnityEditor.Experimental.AssetImporters;
+#endif
 using UnityEngine;
 using VRMShaders;
 
 namespace UniGLTF
 {
-    public abstract class RemapScriptedImporterEditorBase : UnityEditor.AssetImporters.ScriptedImporterEditor
+    /// <summary>
+    /// https://github.com/Unity-Technologies/UnityCsReference/blob/2019.4/Modules/AssetPipelineEditor/ImportSettings/AssetImporterEditor.cs
+    /// 
+    /// の作法に合わせる
+    /// </summary>
+    public abstract class RemapScriptedImporterEditorBase : ScriptedImporterEditor
     {
+        protected ScriptedImporter m_importer;
+
         /// <summary>
         /// Apply されていない変更を保持する
         /// 
@@ -33,45 +44,46 @@ namespace UniGLTF
             m_editMap.AddRange(value.Select(kv => new RemapEditorBase.SubAssetPair(kv.Key, kv.Value)));
         }
 
-        public void RevertRemap()
+        /// <summary>
+        /// Revert
+        /// </summary>
+        protected override void ResetValues()
         {
             m_editMap.Clear();
+
+            base.ResetValues();
         }
 
-        public void ApplyRemap(UnityEditor.AssetImporters.ScriptedImporter importer)
+        public override bool HasModified()
+        {
+            if (m_editMap.Any())
+            {
+                return true;
+            }
+            return base.HasModified();
+        }
+
+        /// <summary>
+        /// Apply
+        /// </summary>
+        protected override void Apply()
         {
             foreach (var kv in m_editMap)
             {
                 if (kv.Object != null)
                 {
-                    importer.AddRemap(kv.ID, kv.Object);
+                    m_importer.AddRemap(kv.ID, kv.Object);
                 }
                 else
                 {
-                    importer.RemoveRemap(kv.ID);
+                    m_importer.RemoveRemap(kv.ID);
                 }
             }
             m_editMap.Clear();
-            AssetDatabase.WriteImportSettingsIfDirty(importer.assetPath);
-            AssetDatabase.ImportAsset(importer.assetPath, ImportAssetOptions.ForceUpdate);
-        }
+            AssetDatabase.WriteImportSettingsIfDirty(m_importer.assetPath);
+            AssetDatabase.ImportAsset(m_importer.assetPath, ImportAssetOptions.ForceUpdate);
 
-        public void RevertApplyRemapGUI(UnityEditor.AssetImporters.ScriptedImporter importer)
-        {
-            GUILayout.BeginHorizontal();
-            GUILayout.FlexibleSpace();
-            using (new EditorGUI.DisabledScope(m_editMap.Count == 0))
-            {
-                if (GUILayout.Button("Revert"))
-                {
-                    RevertRemap();
-                }
-                if (GUILayout.Button("Apply"))
-                {
-                    ApplyRemap(importer);
-                }
-            }
-            GUILayout.EndHorizontal();
+            base.Apply();
         }
     }
 }

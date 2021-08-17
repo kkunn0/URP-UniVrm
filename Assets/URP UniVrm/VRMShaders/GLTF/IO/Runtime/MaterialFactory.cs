@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 
+
 namespace VRMShaders
 {
     public delegate Task<Texture> GetTextureAsyncFunc(TextureDescriptor texDesc, IAwaitCaller awaitCaller);
@@ -123,7 +124,8 @@ namespace VRMShaders
                 shaderName = fallback;
             }
 
-            var shader = Resources.Load<Shader>("MToon");
+            //var shader = Shader.Find(shaderName);
+            Shader shader = Resources.Load<Shader>("MToon");
             if (shader == null)
             {
                 throw new Exception($"shader: {shaderName} not found");
