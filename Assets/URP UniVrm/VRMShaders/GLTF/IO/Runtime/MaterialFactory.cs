@@ -125,10 +125,11 @@ namespace VRMShaders
             }
 
             //var shader = Shader.Find(shaderName);
-            Shader shader = Resources.Load<Shader>("MToon");
+            Shader shader = (Shader)Resources.Load("MToon");
             if (shader == null)
             {
-                throw new Exception($"shader: {shaderName} not found");
+                //throw new Exception($"shader: {shaderName} not found");
+                shader = Shader.Find("VRM/MToon");
             }
 
             material = new Material(shader);
