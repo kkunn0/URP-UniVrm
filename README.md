@@ -13,7 +13,7 @@ The UniVrm version of this package is UniVRM0X-0.80.0.
 
 Drag and drop the unipackage file into your Unity project to use it.
 
-[URPUniVrm_version_1.unitypackage](https://github.com/akihisaArchieSakai/URP-UniVrm/releases/tag/ver-1.0.0)
+[URPUniVrm_ver_1_0_2.unitypackage](https://github.com/akihisaArchieSakai/URP-UniVrm/releases/tag/ver-1.0.2)
 
 Just import this package into your Universal Render Pipeline project, drag and drop the Vrm file, and toon shaders will appear just fine.
 
@@ -23,7 +23,7 @@ If you like this project, please support my activities.
 
 ## Usage
 
-The following Youtube video explains how to use it in detail.
+The following [Youtube video](http://www.youtube.com/watch?v=QSpa_vyYA1Q) explains how to use it in detail.
 
 [![Animate Vroid 3D model in Unity's URP (Universal Render Pipeline) & Mixamo](https://img.youtube.com/vi/QSpa_vyYA1Q/0.jpg)](http://www.youtube.com/watch?v=QSpa_vyYA1Q)
 

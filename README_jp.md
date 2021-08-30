@@ -13,7 +13,7 @@ UniVrmのバージョンはUniVRM0X-0.80.0です。
 
 unipackageファイルをあなたのUnityプロジェクトにドラッグ&ドロップして使ってください。
 
-[URPUniVrm_version_1.unitypackage](https://github.com/akihisaArchieSakai/URP-UniVrm/releases/tag/ver-1.0.0)
+[URPUniVrm_ver_1_0_2.unitypackage](https://github.com/akihisaArchieSakai/URP-UniVrm/releases/tag/ver-1.0.2)
 
 あなたのUniversal Render Pipelineプロジェクトにインポートするだけで、Vrmをプロジェクトにドラッグ&ドロップするとURP用のシェーダーが上手く割り当てられるようになっています。
 
@@ -23,7 +23,7 @@ unipackageファイルをあなたのUnityプロジェクトにドラッグ&ド�
 
 ## 使い方
 
-以下のYoutube動画にて使い方を詳しく解説しています。
+以下の[Youtube動画](http://www.youtube.com/watch?v=QSpa_vyYA1Q)にて使い方を詳しく解説しています。
 
 [![Animate Vroid 3D model in Unity's URP (Universal Render Pipeline) & Mixamo](https://img.youtube.com/vi/QSpa_vyYA1Q/0.jpg)](http://www.youtube.com/watch?v=QSpa_vyYA1Q)
 
