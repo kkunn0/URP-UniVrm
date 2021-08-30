@@ -21,6 +21,12 @@ unipackageファイルをあなたのUnityプロジェクトにドラッグ&ド�
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S52PWUR)
 
+## 使い方
+
+以下のYoutube動画にて使い方を詳しく解説しています。
+
+[![Animate Vroid 3D model in Unity's URP (Universal Render Pipeline) & Mixamo](https://img.youtube.com/vi/QSpa_vyYA1Q/0.jpg)](http://www.youtube.com/watch?v=QSpa_vyYA1Q)
+
 ## ライセンス
 
 [MIT](./LICENSE.txt)

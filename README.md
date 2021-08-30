@@ -7,7 +7,7 @@ This package also makes sure that the shaders of the Vroid model are properly di
 It is a mix of the following two packages
 
 * [UniVrm](https://github.com/vrm-c/UniVRM)
-* [Shader Graphs MToon for URP VR](https://github.com/simplestargame/ShaderGraphsMToonForURPVR) ← Errors in custom shaders were fixed in the original repository with this package.
+* [Shader Graphs MToon for URP VR](https://github.com/simplestargame/ShaderGraphsMToonForURPVR)
 
 The UniVrm version of this package is UniVRM0X-0.80.0.
 
@@ -20,6 +20,12 @@ Just import this package into your Universal Render Pipeline project, drag and d
 If you like this project, please support my activities.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S52PWUR)
+
+## Usage
+
+The following Youtube video explains how to use it in detail.
+
+[![Animate Vroid 3D model in Unity's URP (Universal Render Pipeline) & Mixamo](https://img.youtube.com/vi/QSpa_vyYA1Q/0.jpg)](http://www.youtube.com/watch?v=QSpa_vyYA1Q)
 
 ## License
 
