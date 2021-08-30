@@ -21,6 +21,12 @@ unipackageファイルをあなたのUnityプロジェクトにドラッグ&ド�
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S52PWUR)
 
+## 推奨環境
+
+* Unity 2020.3.X 以降がオススメです。
+
+(2019.4.Xではシェーダーグラフが上手くインポートされないようなので、詳しい人のプルリクエストを待っています。)
+
 ## 使い方
 
 以下の[Youtube動画](http://www.youtube.com/watch?v=QSpa_vyYA1Q)にて使い方を詳しく解説しています。

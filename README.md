@@ -21,6 +21,12 @@ If you like this project, please support my activities.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S52PWUR)
 
+## Requirements
+
+* Unity 2020.3.X or higher is recommended
+
+(The shader graph doesn't seem to import well in 2019.4.X. I'm waiting for a pull request from someone who knows more about it.)
+
 ## Usage
 
 The following [Youtube video](http://www.youtube.com/watch?v=QSpa_vyYA1Q) explains how to use it in detail.
