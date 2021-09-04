@@ -7,13 +7,13 @@ UnityのUniversal Render PipelineでもVroidモデルのシェーダー がき�
 このパッケージはUniVrmとURP用のシェーダーを簡単に扱えるようにミックスしています。
 
 * [UniVrm](https://github.com/vrm-c/UniVRM)
-* [Shader Graphs MToon for URP VR](https://github.com/simplestargame/ShaderGraphsMToonForURPVR) ← 元のリポジトリにはカスタムシェーダーのエラーをこのパッケージにて修正しました。。
+* [Shader Graphs MToon for URP VR](https://github.com/simplestargame/ShaderGraphsMToonForURPVR)
 
-UniVrmのバージョンはUniVRM0X-0.80.0です。
+UniVrmのバージョンはv0.82.1です。
 
 unipackageファイルをあなたのUnityプロジェクトにドラッグ&ドロップして使ってください。
 
-[URPUniVrm_ver_1_0_2.unitypackage](https://github.com/akihisaArchieSakai/URP-UniVrm/releases/tag/ver-1.0.2)
+[URPUniVrm_ver_1_0_3.unitypackage](https://github.com/akihisaArchieSakai/URP-UniVrm/releases/tag/ver-1.0.3)
 
 あなたのUniversal Render Pipelineプロジェクトにインポートするだけで、Vrmをプロジェクトにドラッグ&ドロップするとURP用のシェーダーが上手く割り当てられるようになっています。
 
