@@ -9,11 +9,11 @@ It is a mix of the following two packages
 * [UniVrm](https://github.com/vrm-c/UniVRM)
 * [Shader Graphs MToon for URP VR](https://github.com/simplestargame/ShaderGraphsMToonForURPVR)
 
-The UniVrm version of this package is UniVRM0X-0.80.0.
+The UniVrm version of this package is v0.82.1.
 
 Drag and drop the unipackage file into your Unity project to use it.
 
-[URPUniVrm_ver_1_0_2.unitypackage](https://github.com/akihisaArchieSakai/URP-UniVrm/releases/tag/ver-1.0.2)
+[URPUniVrm_ver_1_0_3.unitypackage](https://github.com/akihisaArchieSakai/URP-UniVrm/releases/tag/ver-1.0.3)
 
 Just import this package into your Universal Render Pipeline project, drag and drop the Vrm file, and toon shaders will appear just fine.
 

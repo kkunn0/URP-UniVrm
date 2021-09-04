@@ -38,6 +38,7 @@ namespace VRM
             //matDesc.RenderQueue = vrmMaterial.renderQueue;
             matDesc.RenderQueue = (int)UnityEngine.Rendering.RenderQueue.GeometryLast < vrmMaterial.renderQueue ? (int)UnityEngine.Rendering.RenderQueue.GeometryLast : vrmMaterial.renderQueue;
 
+
             foreach (var kv in vrmMaterial.floatProperties)
             {
                 matDesc.FloatValues.Add(kv.Key, kv.Value);
