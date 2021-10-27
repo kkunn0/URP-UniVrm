@@ -43,7 +43,6 @@ Evelyn GameDev
 
 * [Youtube](https://www.youtube.com/c/EvelynGameDev)
 * [Twitter](https://twitter.com/ArchieSakai)
-* [Instagram](https://www.instagram.com/evelyn_gamedev/)
 * [Blog](https://gamedev.soarhap.com/)
 
 ## English README is here
